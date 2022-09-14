@@ -1,0 +1,42 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    //polices de caractères
+    @font-face {
+        font-family: "font-1";
+        src: url(../assets/fonts/Montserrat-Regular.ttf);
+        font-family: "font-2";
+        src: url(../assets/fonts/Montserrat-Medium.ttf);
+        font-family: "font-3";
+        src: url(../assets/fonts/Montserrat-Black.ttf);
+    }
+    
+    $MontserratRegular: "font-1", sans-serif;
+    $MontserratMedium: "font-2", sans-serif;
+    $MontserratBlack: "font-3", sans-serif;
+    
+    $color1: #A772F2;
+    $color2: #7141D9;
+    $color3: #C9B6F2;
+    $color4: #F2E205;
+    $color5: #F2B705;
+    
+    $white: #f1f1f1;
+    
+    li {
+        list-style-type: none;
+    }
+    
+    *:focus {
+        outline: 0;
+        border: none;
+    }
+    
+    body {
+        background: $white;
+        height: 100vh;
+    }
+    

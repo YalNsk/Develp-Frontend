@@ -1,5 +1,9 @@
 @import "./settings";
 @import "../components/nav/navStyle";
+@import "../components/formRegister/formRegister";
+@import "../components/formLogin/formLogin";
+
+
 
 .App {
   background: $white;
@@ -11,8 +15,43 @@ h1 {
   text-align: center;
   font-family: $MontserratBlack;
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
   text-align: center;
+}
+
+input {
+  border: none;
+  height: 2rem;
+  margin: 1rem;
+  width: 250px;
+  border-radius: 5px;
+  padding-left: 3px;
+}
+
+button {
+  background-color: $color4;
+  height: 30px;
+  width: 20%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $color5;
+  color: $white;
+}
+
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $color3;
+    border-radius: 5px;
 }

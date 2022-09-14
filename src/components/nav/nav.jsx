@@ -9,30 +9,31 @@ import {UserIcon} from '@heroicons/react/24/outline'
 const Nav = () => {
     return (
 
-        <div>
-            <NavLink to='/les-annonces'>
+        <div className="navbar">
+            <NavLink className="link" to='/les-annonces'
+            >
                 <p>Les annonces</p>
             </NavLink>
             <Link to="/">
                 <img src={logo}></img>
             </Link>
-            <ul>
-                <NavLink to='resultats-recherches'>
+            <ul className="microNavbar">
+                <NavLink className="link" to='resultats-recherches'>
                     <li>
                         {/* {MagnifyingGlassIcon} */} Recherches
                     </li>
                 </NavLink>
-                <NavLink to="messagerie">
+                <NavLink className="link" to="messagerie">
                     <li>
                         {/* {EnvelopeIcon} */} Messagerie
                     </li>
                 </NavLink>
-                <NavLink>
+                <NavLink className="link">
                     <li>
                         {/* {HeartIcon} */} Favoris
                     </li>
                 </NavLink>
-                <NavLink to='/login'>
+                <NavLink className="link" to='/login'>
                     <li>
                         {/* {UserIcon} */} Profil
                     </li>

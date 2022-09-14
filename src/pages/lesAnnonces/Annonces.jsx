@@ -6,7 +6,7 @@ const Annonces = () => {
     return (
         <div>
             <Nav />
-            <h1>Accueil</h1>
+            <h1>Toutes les annonces</h1>
         </div>
     )
 

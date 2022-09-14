@@ -9,22 +9,23 @@
         font-family: "font-1";
         src: url(../assets/fonts/Montserrat-Regular.ttf);
         font-family: "font-2";
-        src: url(../assets/fonts/Montserrat-Medium.ttf);
+        src: url(../assets/fonts/Montserrat-ExtraBold.ttf);
         font-family: "font-3";
         src: url(../assets/fonts/Montserrat-Black.ttf);
     }
     
     $MontserratRegular: "font-1", sans-serif;
-    $MontserratMedium: "font-2", sans-serif;
+    $MontserratExtraBold: "font-2", sans-serif;
     $MontserratBlack: "font-3", sans-serif;
     
     $color1: #A772F2;
-    $color2: #7141D9;
+    $color2: #5431a1;
     $color3: #C9B6F2;
     $color4: #F2E205;
     $color5: #F2B705;
     
     $white: #f1f1f1;
+    $grey : #c9c9c9;
     
     li {
         list-style-type: none;

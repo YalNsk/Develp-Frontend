@@ -6,7 +6,7 @@ const Recherches = () => {
     return (
         <div>
             <Nav />
-            <h1>Résultats des recherches</h1>
+            <h1>Recherches</h1>
         </div>
     )
 

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 
@@ -67,7 +66,6 @@ const FormRegister = () => {
             <option value="Python">Python</option>
             <option value="JavaScript">JavaScript</option>
             <option value="C">C</option>
-            <option value="C++">C++</option>
             <option value="C#">C#</option>
             <option value="Ruby">Ruby</option>
             <option value="PHP">PHP</option>

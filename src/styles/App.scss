@@ -2,6 +2,7 @@
 @import "../components/nav/navStyle";
 @import "../components/formRegister/formRegister";
 @import "../components/formLogin/formLogin";
+@import "../pages/accueil/accueilStyle";
 
 
 
@@ -14,12 +15,14 @@
 h1 {
   text-align: center;
   font-family: $MontserratBlack;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
+  font-family: $MontserratExtraBold;
+  font-size: 2.5rem;
 }
 
 input {

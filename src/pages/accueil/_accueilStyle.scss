@@ -1,0 +1,38 @@
+.buttonsAccueil {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 200px;
+
+    .buttonA {
+        margin-right: 20px;
+        height: 50px;
+        width: 120px;
+
+        .link {
+            color: $color2;
+        }
+    }
+    .buttonB {
+        margin-right: 20px;
+        height: 50px;
+        background-color: $color5;
+        width: 150px;
+
+        .link {
+            color: $white;
+        }
+    }
+}
+
+.ambiance {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.accueil {
+    height: 33vh;
+}
+.accueil img {
+    width: 30%;
+}

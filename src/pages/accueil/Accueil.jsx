@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "../../components/nav/nav";
 import {NavLink } from "react-router-dom";
-import ambiance from "../../assets/img/image_ambiance.jpg"
+import ambiance from "../../assets/img/image_ambiance.png"
 
 
 const Accueil = () => {
@@ -18,7 +18,11 @@ const Accueil = () => {
                         </button>
                 </div>
                 <div className="ambiance">
+                    <div className="texte">
                     <h2>Develp ... <br/> Ensemble pour un code meilleur</h2>
+                    <p>Si vous ête bloqué dans votre code, publiez une annonce ici, vous trouverez sûrement un développeur qui sera ravi de vous aider. </p>
+                    </div>
+                    
                     <img src={ambiance}></img>
                 </div>
                 <div className="lesAnnonces">

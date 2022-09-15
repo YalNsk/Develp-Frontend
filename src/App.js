@@ -16,19 +16,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        
       <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Accueil />} />
-          <Route path="/les-annonces" element={<Annonces />} />
-          <Route path="/resultats-recherches" element={<Recherches />} />
-          <Route path="/login" element={<SeConnecter />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/messagerie" element={<Messagerie />} />
-          <Route path="/profil" element={<Profil />} />
-          <Route path="/favoris" element={<Favoris />} />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/les-annonces" element={<Annonces />} />
+            <Route path="/resultats-recherches" element={<Recherches />} />
+            <Route path="/login" element={<SeConnecter />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/messagerie" element={<Messagerie />} />
+            <Route path="/profil" element={<Profil />} />
+            <Route path="/favoris" element={<Favoris />} />
+          </Routes>
+        </BrowserRouter>
       </Provider>
       </header>
     </div>

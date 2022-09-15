@@ -30,6 +30,15 @@
     justify-content: space-around;
     align-items: flex-start;
     height: 10vh;
+
+    .texte {
+        width: 33%;
+        
+    }
+
+    .texte p {
+        margin: 15px;
+    }
 }
 .accueil {
     height: 33vh;

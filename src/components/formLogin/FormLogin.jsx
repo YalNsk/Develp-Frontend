@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../redux/actions/authAction";
+import { loginUser } from "../../redux/actions/authAction";
 import { useEffect } from "react";
 
 const Formlogin = () => {
@@ -29,7 +29,7 @@ const Formlogin = () => {
 
 
     const onSubmit = (data) => {
-        dispatch(login(data));
+        dispatch(loginUser(data));
         console.log(data);
         reset();
     };

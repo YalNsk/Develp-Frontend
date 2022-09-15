@@ -1,16 +1,20 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { registerUser, login, logOut } from "../actions/authAction";
+import { registerUser, loginUser, logOut } from "../actions/authAction";
 
-const initialState = { token: null, isConnected: false, msgError: "" };
+// à quoi ça ressemble à la base 
+const initialState = { token: null, isConnected: false, userId:null, msgError: "" };
 
+
+// cette constante utilise la méthode createReducer (importée donc existante) qui utilise en premier paramètre le state initiale et en deuxième paramètre un callback,
+// une fonction anonyme avec comme paramètre builder 
 const authReducer = createReducer(initialState, (builder) => {
     builder
-            .addCase(login.fulfilled, (state, action) => {
+            .addCase(loginUser.fulfilled, (state, action) => {
             state.isConnected = true;
             state.msgError = "";
             state.token = action.payload;
         })
-            .addCase(login.rejected, (state, action) => {
+            .addCase(loginUser.rejected, (state, action) => {
             state.isConnected = false;
             state.msgError = "Votre mot de passe ou email est invalide";
             state.token = null;

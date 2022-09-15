@@ -12,7 +12,10 @@
         text-decoration: none;
         font-family: $MontserratExtraBold;
         color : $white;
-        // font-weight: 700;
+        
+        p {
+            font-size: 1.5rem;
+        }
     }
 
     
@@ -25,13 +28,22 @@
 
     .microNavbar {
         display: flex;
-        width: 33%;
+        width: 20%;
         justify-content: right;
-        // border: solid 1px red;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .link {
             padding: 15px;
             text-decoration: none;
+            font-size: 12px;
+            .icon {
+                width: 40px;
+            }
         }
     }
 

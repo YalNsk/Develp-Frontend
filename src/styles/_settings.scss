@@ -6,14 +6,20 @@
     
     //polices de caractères
     @font-face {
-        font-family: "font-1";
-        src: url(../assets/fonts/Montserrat-Regular.ttf);
         font-family: "font-2";
         src: url(../assets/fonts/Montserrat-ExtraBold.ttf);
+        
+    }
+
+    @font-face {
+        font-family: "font-1";
+        src: url(../assets/fonts/Montserrat-Regular.ttf);
+    }
+    
+    @font-face {
         font-family: "font-3";
         src: url(../assets/fonts/Montserrat-Black.ttf);
     }
-    
     $MontserratRegular: "font-1", sans-serif;
     $MontserratExtraBold: "font-2", sans-serif;
     $MontserratBlack: "font-3", sans-serif;

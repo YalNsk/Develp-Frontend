@@ -18,24 +18,24 @@ const Nav = () => {
                 <img src={logo}></img>
             </Link>
             <ul className="microNavbar">
-                <NavLink className="link" to='resultats-recherches'>
+                <NavLink className="link" to='/resultats-recherches'>
                     <li>
-                        {/* {MagnifyingGlassIcon} */} Recherches
+                        <MagnifyingGlassIcon className="icon" /> Recherches
                     </li>
                 </NavLink>
-                <NavLink className="link" to="messagerie">
+                <NavLink className="link" to="/messagerie">
                     <li>
-                        {/* {EnvelopeIcon} */} Messagerie
+                        <EnvelopeIcon className="icon" /> Messagerie
                     </li>
                 </NavLink>
                 <NavLink className="link">
                     <li>
-                        {/* {HeartIcon} */} Favoris
+                        <HeartIcon className="icon" /> Favoris
                     </li>
                 </NavLink>
                 <NavLink className="link" to='/login'>
                     <li>
-                        {/* {UserIcon} */} Profil
+                        <UserIcon className="icon" /> Profil
                     </li>
                 </NavLink>
             </ul>

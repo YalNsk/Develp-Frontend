@@ -34,7 +34,7 @@ const Formlogin = () => {
         <button type="submit" >
             Se connecter
         </button>
-        <Link className="link" to = "/loginRegister">Vous n'avez pas de compte ? Inscrivez-vous</Link>
+        <Link className="link" to = "/register">Vous n'avez pas de compte ? Inscrivez-vous</Link>
         </form>
     );
     };

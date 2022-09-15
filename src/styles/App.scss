@@ -55,3 +55,13 @@ form {
     background-color: $color3;
     border-radius: 5px;
 }
+
+select {
+  border: none;
+  height: 2rem;
+  margin: 1rem;
+  width: 250px;
+  border-radius: 5px;
+  padding-left: 3px;
+  font-size: 0.9rem;
+}

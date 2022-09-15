@@ -53,6 +53,31 @@ const FormRegister = () => {
             <input id="password" type="password" {...register("password")} />
         </div>
 
+        <div>
+        <label htmlFor="country">Je code en : </label>
+            <select
+            name="technoUtilisees"
+            id="techno"
+            className="selection"
+            {...register("techno")}
+            >
+            <option className="option" value="">
+                Choisissez...
+            </option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="C#">C#</option>
+            <option value="Ruby">Ruby</option>
+            <option value="PHP">PHP</option>
+            <option value="Objective-C">"Objective-C</option>
+            <option value="Autre">Autre</option>
+            </select>
+        </div>
+
+
+
         <button>Créer un compte</button>
 
         <p className="aufait">Tous les champs sont obligatoires</p>

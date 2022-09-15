@@ -28,11 +28,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    height: 10vh;
 }
 .accueil {
     height: 33vh;
 }
 .accueil img {
-    width: 30%;
+    width: 25%;
+    margin: 15px;
+
+}
+
+.lesAnnonces {
+    margin-top: 4rem;
 }

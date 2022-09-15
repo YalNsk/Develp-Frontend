@@ -1,7 +1,11 @@
-.form{
-    height: 60vh;
+.form1{
+    height: 68vh;
     width: 50%;
-
+    padding: 15px;
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    }
     .aufait {
         font-size: 12px;
     }

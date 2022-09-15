@@ -1,6 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { login } from "../../redux/actions/authAction";
+import { useEffect } from "react";
 
 const Formlogin = () => {
     const {
@@ -10,14 +14,28 @@ const Formlogin = () => {
         reset,
     } = useForm();
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const isConnected = useSelector((state) => {
+        return state.auth.isConnected;
+    });
+
+    useEffect(() => {
+        if (isConnected) {
+        navigate("/search");
+        }
+    }, [isConnected]);
+
 
     const onSubmit = (data) => {
+        dispatch(login(data));
         console.log(data);
         reset();
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form2" onSubmit={handleSubmit(onSubmit)}>
         <div className="inputs">
             <label htmlFor="mail">Email : </label>
             <input

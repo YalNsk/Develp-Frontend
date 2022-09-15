@@ -1,4 +1,8 @@
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../redux/actions/authAction";
 
 
 const FormRegister = () => {
@@ -8,13 +12,28 @@ const FormRegister = () => {
         formState: { errors },
     } = useForm();
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const isConnected = useSelector((state) => {
+        return state.auth.isConnected;
+        });
+        
+        useEffect(() => {
+            if (isConnected) {
+            navigate("/");
+            }
+        }, [isConnected]);
+    
+
 
     const onSubmit = (data) => {
+        dispatch(registerUser(data));
         console.log(data);
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form1" onSubmit={handleSubmit(onSubmit)}>
         <div className="inputs">
             <label htmlFor="mail">Email : </label>
             <input

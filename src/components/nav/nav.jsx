@@ -35,7 +35,7 @@ const Nav = () => {
                 </NavLink>
                 <NavLink className="link" to='/login'>
                     <li>
-                        <UserIcon className="icon" /> Profil
+                        <UserIcon className="icon" /> Connexion
                     </li>
                 </NavLink>
             </ul>

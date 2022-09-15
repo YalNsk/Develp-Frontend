@@ -8,12 +8,15 @@ import Profil from "./pages/profil/Profil";
 import Favoris from "./pages/favoris/Favoris"
 import Register from "./pages/login-register/Register";
 import SeConnecter from "./pages/login-register/Login";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Accueil />} />
@@ -24,11 +27,12 @@ function App() {
           <Route path="/messagerie" element={<Messagerie />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/favoris" element={<Favoris />} />
-
         </Routes>
       </BrowserRouter>
+      </Provider>
       </header>
     </div>
+    
   );
 }
 

@@ -35,11 +35,11 @@ const FormRegister = () => {
     return (
         <form className="form1" onSubmit={handleSubmit(onSubmit)}>
         <div className="inputs">
-            <label htmlFor="mail">Email : </label>
+            <label htmlFor="email">Email : </label>
             <input
-            id="mail"
-            type="mail"
-            {...register("mail", { required: true })}
+            id="email"
+            type="email"
+            {...register("email", { required: true })}
             />
         <div className="inputs">
             <label htmlFor="pseudo">Pseudo : </label>

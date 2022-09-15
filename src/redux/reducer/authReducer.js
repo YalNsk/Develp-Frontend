@@ -9,6 +9,7 @@ const initialState = { token: null, isConnected: false, userId:null, msgError: "
 // une fonction anonyme avec comme paramètre builder 
 const authReducer = createReducer(initialState, (builder) => {
     builder
+    // une action asynchrone aura toujours 3 statuts
             .addCase(loginUser.fulfilled, (state, action) => {
             state.isConnected = true;
             state.msgError = "";

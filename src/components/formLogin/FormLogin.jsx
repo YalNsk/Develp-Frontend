@@ -23,7 +23,7 @@ const Formlogin = () => {
 
     useEffect(() => {
         if (isConnected) {
-        navigate("/search");
+        navigate("/");
         }
     }, [isConnected]);
 
@@ -37,11 +37,11 @@ const Formlogin = () => {
     return (
         <form className="form2" onSubmit={handleSubmit(onSubmit)}>
         <div className="inputs">
-            <label htmlFor="mail">Email : </label>
+            <label htmlFor="credential">Email : </label>
             <input
-            id="mail"
-            type="mail"
-            {...register("mail", { required: true })}
+            id="email"
+            type="email"
+            {...register("credential", { required: true })}
             />
         </div>
         <div className="inputs">

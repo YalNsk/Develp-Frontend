@@ -41,7 +41,8 @@
     }
 }
 .accueil {
-    height: 33vh;
+    display: flex;
+    flex-direction: column;
 }
 .accueil img {
     width: 25%;
@@ -51,4 +52,15 @@
 
 .lesAnnonces {
     margin-top: 4rem;
+    // background-color: $color3;
+    border: solid 1px red;
+
+    .buttonC {
+        width : 200px;
+        height: 50px;
+    }
+}
+
+.lesAnnonces2 {
+    background-color: $color3;
 }

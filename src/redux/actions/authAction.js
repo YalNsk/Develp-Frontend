@@ -7,7 +7,7 @@ export const loginUser = createAsyncThunk("login", async (data) => {
         "http://localhost:8080/api/auth/login/",
         data
     );
-    return response.data.token;
+    return response.data;
 });
 
 export const registerUser = createAsyncThunk("register", async (data) => {

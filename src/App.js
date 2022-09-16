@@ -10,6 +10,7 @@ import Register from "./pages/login-register/Register";
 import SeConnecter from "./pages/login-register/Login";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import FormPost from "./components/formPosts/FormPost";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/messagerie" element={<Messagerie />} />
             <Route path="/profil" element={<Profil />} />
             <Route path="/favoris" element={<Favoris />} />
+            <Route path="/addpost" element={<FormPost />} />
           </Routes>
         </BrowserRouter>
       </Provider>

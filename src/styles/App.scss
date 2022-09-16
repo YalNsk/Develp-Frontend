@@ -3,6 +3,7 @@
 @import "../components/formRegister/formRegister";
 @import "../components/formLogin/formLogin";
 @import "../pages/accueil/accueilStyle";
+@import "../components/formPosts/formPostStyle";
 
 
 
@@ -10,6 +11,7 @@
   background: $white;
   font-family: $MontserratRegular;
   font-size: 20px;
+  padding-bottom: 2rem;
 }
 
 h1 {

@@ -5,8 +5,12 @@ import {MagnifyingGlassIcon} from '@heroicons/react/24/outline'
 import {HeartIcon} from '@heroicons/react/24/outline'
 import {EnvelopeIcon} from '@heroicons/react/24/outline'
 import {UserIcon} from '@heroicons/react/24/outline'
+import { useSelector } from "react-redux";
 
 const Nav = () => {
+
+    const isConnected = useSelector(state => state.auth.isConnected)
+
     return (
 
         <div className="navbar">
@@ -33,11 +37,17 @@ const Nav = () => {
                         <HeartIcon className="icon" /> Favoris
                     </li>
                 </NavLink>
-                <NavLink className="link" to='/login'>
+
+                {!isConnected && <NavLink className="link" to='/login'>
                     <li>
                         <UserIcon className="icon" /> Connexion
                     </li>
-                </NavLink>
+                </NavLink> }
+                {isConnected && <NavLink className="link" to='/profil'>
+                    <li>
+                        <UserIcon className="icon" /> Profil
+                    </li>
+                </NavLink> }
             </ul>
         </div>
 

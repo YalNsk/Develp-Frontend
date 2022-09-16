@@ -1,0 +1,26 @@
+.formPost {
+    width: 50%;
+    height: 80vh;
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message {
+        resize: inherit;
+        border: none;
+        border-radius: 5px;
+        margin: 15px;
+    }
+
+    .précision {
+        font-size: 0.75rem;
+    }
+
+    button {
+        width: 200px;
+        height: 30px;
+        margin: 0 auto;
+    }
+}

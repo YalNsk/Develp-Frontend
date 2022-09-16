@@ -1,0 +1,33 @@
+.card {
+    width: 250px;
+    height: 320px;
+    background-color: $color3;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+
+
+    .descr {
+        background-color: $white;
+        margin : 10px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    button {
+        width: 100px;
+        font-size: 12px;
+
+    }
+
+    .img {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+h5 {
+    font-size: 14px;
+}

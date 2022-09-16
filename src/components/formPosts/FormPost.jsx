@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
@@ -9,7 +9,6 @@ const FormPost = () => {
     const {
         handleSubmit,
         register,
-        formState: { errors },
     } = useForm();
 
 
@@ -33,13 +32,18 @@ const FormPost = () => {
     return (
         <form className="formPost" onSubmit={handleSubmit(envoyer)}>
             <div className="inputs">
-                <label htmlFor="message">Votre message : </label>
+                <label htmlFor="titre">Titre de l'annonce * : </label>
+                <input type="text" 
+                {...register("titre")}/>
+            </div>
+            <div className="inputs">
+                <label htmlFor="message">Votre message * : </label>
                 <textarea className="message" cols="50" rows="15" 
                 {...register("message")}/>
                 <p className="précision">Soyez le plus précis possible</p>
             </div>
             <div className="inputs">
-        <label htmlFor="country">Mon site est codé en : </label>
+        <label htmlFor="country">Mon site est principalement codé en : </label>
             <select name="technoUtilisees" id="techno" className="selection"{...register("techno")}>
                 <option className="option" value="">
                     Choisissez...
@@ -54,7 +58,7 @@ const FormPost = () => {
                 <option value="Autre">Autre</option>
             </select>
             <div className="inputs">
-                <label htmlFor="budget">Mon budget est de (en euros) : </label>
+                <label htmlFor="budget">Mon budget est de (en euros) * : </label>
                 <input type="text" 
                 {...register("budget")}/>
             </div>

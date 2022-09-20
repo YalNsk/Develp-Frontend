@@ -1,6 +1,6 @@
 .card {
     width: 250px;
-    height: 320px;
+    height: 500px;
     background-color: $color3;
     margin: 1rem;
     display: flex;
@@ -14,7 +14,15 @@
         margin : 10px;
         font-size: 12px;
         padding: 10px;
+        width: 200px;
+        height: 180px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
     }
+    // .descrText {
+        
+    // }
 
     button {
         width: 100px;

@@ -24,13 +24,26 @@ const FormPost = () => {
     const envoyer = (data) => {
         console.log(data);
         data.senderiD = userId;
-        axios.post("http://localhost:8080/api/posts", data)
+        const inputFile = document.getElementById("illu")
+        const postData = new FormData()
+        Object.keys(data).forEach(
+            (key) => {postData.append(key, data[key])}
+        )
+        postData.append("illu", inputFile.files.item(0))
+        axios({
+            method : 'post',
+            url :  "http://localhost:8080/api/posts", 
+            data : postData,
+            headers : {
+                'Content-Type' : `multipart/form-data`
+            }
+        })
             .then(response => {navigate("/les-annonces")})
             .catch(err => {setMsgError("Vous n'avez pas rempli correctement le formulaire"); console.log(err);})
     };
 
     return (
-        <form className="formPost" onSubmit={handleSubmit(envoyer)}>
+        <form className="formPost" onSubmit={handleSubmit(envoyer)} encType="multipart/form-data">
             <div className="inputs">
                 <label htmlFor="titre">Titre de l'annonce * : </label>
                 <input type="text" 
@@ -38,7 +51,7 @@ const FormPost = () => {
             </div>
             <div className="inputs">
                 <label htmlFor="message">Votre message * : </label>
-                <textarea className="message" cols="50" rows="15" 
+                <textarea className="message" cols="60" rows="15" 
                 {...register("message")}/>
                 <p className="précision">Soyez le plus précis possible</p>
             </div>
@@ -64,8 +77,10 @@ const FormPost = () => {
             </div>
             <div className="inputs">
                 <label htmlFor="illu">Eventuelle illustration du code : </label>
-                <input type="file" 
-                {...register("illu")}/>
+                <input type="file"
+                name="illu"
+                id="illu"
+                /*{...register("file")}*//>
             </div>
             <div>{msgError}</div>
         <button type="submit">Envoyez l'annonce</button>

@@ -26,10 +26,13 @@ const PageAnnonceIndiv = ({titre, message, techno, budget, illu, senderiD, _id})
                     <img src={annonce.illu} alt="illustration code"/>
                 </div>
                 <div className="infos">
-                    <p>{annonce.budget} €</p>
-                    <p>{annonce.techno}</p>
+                    <div className="infosAnnonce">
+                        <p>{annonce.budget} €</p>
+                        <p>{annonce.techno}</p>
+                    </div>
+                    <button>J'aide l'utilisateur</button>
                 </div>
-            <button>J'aide l'utilisateur</button>
+                
             </div>
         </div>
     )

@@ -3,12 +3,16 @@ import React, { useEffect } from "react";
 import Card from "../../components/card/Card";
 import Nav from "../../components/nav/nav";
 import { useState } from "react";
+import {NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 const Annonces = () => {
 
     const [annonces, setannonces] = useState([]); 
     const url = "http://localhost:8080/api/posts"
+
+    const isConnected = useSelector(state => state.auth.isConnected)
 
     useEffect(() => {
         axios.get(url).then((res) => {console.log(res); setannonces(res.data)});
@@ -27,6 +31,11 @@ const Annonces = () => {
                 
             </ul>
             
+                    <button className="buttonC">
+                    {isConnected && <NavLink className="link" to="/addpost">Ajouter une annonce</NavLink>}
+                    {!isConnected && <NavLink className="link" to="/login">Ajouter une annonce</NavLink>}
+                    </button>
+    
         </div>
     )
 

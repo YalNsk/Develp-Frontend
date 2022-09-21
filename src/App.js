@@ -11,6 +11,7 @@ import SeConnecter from "./pages/login-register/Login";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import NouvelleAnnonce from "./pages/lesAnnonces/NouvelleAnnonce";
+import PageAnnonceIndiv from "./pages/lesAnnonces/AnnonceIndiv";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/profil" element={<Profil />} />
             <Route path="/favoris" element={<Favoris />} />
             <Route path="/addpost" element={<NouvelleAnnonce />} />
+            <Route path="/annonce" element={<PageAnnonceIndiv />} />
           </Routes>
         </BrowserRouter>
       </Provider>

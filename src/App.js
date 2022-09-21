@@ -5,7 +5,6 @@ import Annonces from "./pages/lesAnnonces/Annonces";
 import Recherches from "./pages/recherches/Recherches";
 import Messagerie from "./pages/messagerie/Messagerie"
 import Profil from "./pages/profil/Profil";
-import Favoris from "./pages/favoris/Favoris"
 import Register from "./pages/login-register/Register";
 import SeConnecter from "./pages/login-register/Login";
 import { Provider } from "react-redux";
@@ -22,7 +21,7 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Accueil />} />
+            <Route path="/*" element={<Accueil />} />
             <Route path="/les-annonces" element={<Annonces />} />
             <Route path="/resultats-recherches" element={<Recherches />} />
             <Route path="/login" element={<SeConnecter />} />

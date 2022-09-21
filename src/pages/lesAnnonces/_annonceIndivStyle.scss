@@ -1,0 +1,43 @@
+.annonceIndiv {
+    display: flex;
+
+    .annonce {
+        width: 50%;
+        margin: 2rem 0 1rem 5rem ;
+        padding: 2%;
+        background-color: $color3;
+
+        p {
+            margin: 5%;
+            padding: 2%;
+            background-color: $white;
+        }
+
+        img {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .infos {
+        width: 20%;
+        margin: 2rem 0 1rem 3rem ;
+        padding: 3%;
+        background-color: $color2;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        button {
+            width : 200px;
+            height: 50px;
+            margin: 15px;
+        }
+    }
+}

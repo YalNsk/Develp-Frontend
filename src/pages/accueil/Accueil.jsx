@@ -62,7 +62,6 @@ const Accueil = () => {
                                 </ul>
                         <button className="buttonC">
                                 <NavLink className="link" to="/addpost">Ajouter une annonce</NavLink>
-                                {/* {!isConnected && <NavLink className="link" to="/login">Ajouter une annonce</NavLink>} */}
                         </button>
                         <button className="buttonC">
                             <NavLink className="link" to="/les-annonces">Voir toutes les annonces</NavLink>

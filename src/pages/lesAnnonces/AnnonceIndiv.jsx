@@ -10,25 +10,26 @@ const PageAnnonceIndiv = ({titre, message, techno, budget, illu, senderiD, _id})
     const { id } = useParams();
     const url = `http://localhost:8080/api/posts/${id}`
     const [annonce, setannonce] = useState([]); 
-
+    
     useEffect(() => {
         axios.get(url).then((res) => {console.log(res); setannonce(res.data)});
     }, [url]);
 
+
     return (
         <div>
                 <Nav />
-            <div>
+            <div className="annonceIndiv">
                 <div className="annonce">
                     <h1> {annonce.titre} </h1>
                     <p>{annonce.message} </p>
                     <img src={annonce.illu} alt="illustration code"/>
                 </div>
                 <div className="infos">
-                    <p>{annonce.budget}</p>
+                    <p>{annonce.budget} €</p>
                     <p>{annonce.techno}</p>
                 </div>
-            <button></button>
+            <button>J'aide l'utilisateur</button>
             </div>
         </div>
     )

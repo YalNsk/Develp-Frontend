@@ -13,7 +13,7 @@ const PageAnnonceIndiv = ({titre, message, techno, budget, illu, senderiD, _id})
 
     useEffect(() => {
         axios.get(url).then((res) => {console.log(res); setannonce(res.data)});
-    }, []);
+    }, [url]);
 
     return (
         <div>
@@ -22,7 +22,7 @@ const PageAnnonceIndiv = ({titre, message, techno, budget, illu, senderiD, _id})
                 <div className="annonce">
                     <h1> {annonce.titre} </h1>
                     <p>{annonce.message} </p>
-                    <div>{annonce.illu}</div>
+                    <img src={annonce.illu} alt="illustration code"/>
                 </div>
                 <div className="infos">
                     <p>{annonce.budget}</p>

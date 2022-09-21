@@ -15,7 +15,7 @@ const Annonces = () => {
     const isConnected = useSelector(state => state.auth.isConnected)
 
     useEffect(() => {
-        axios.get(url).then((res) => {console.log(res); setannonces(res.data)});
+        axios.get(url).then((res) => {console.log(res); setannonces(res.data.posts)});
     }, []);
 
     return (

@@ -10,7 +10,6 @@ const Formlogin = () => {
     const {
         handleSubmit,
         register,
-        formState: { errors },
         reset,
     } = useForm();
 
@@ -22,8 +21,9 @@ const Formlogin = () => {
     });
 
     useEffect(() => {
+        console.log(isConnected);
         if (isConnected) {
-        navigate("/");
+        navigate(-1);
         }
     }, [isConnected]);
 

@@ -15,7 +15,7 @@ const Card = ({element}) => {
                 
                 <div className="descr"> <p className="descrText">{element.message}</p></div>
             </div>
-            <button className="plus"> <NavLink to="/annonce">Voir plus</NavLink> </button>
+            <button className="plus"> <NavLink to={`/annonce/${element._id}`}>Voir plus</NavLink> </button>
             
         </li>
         );

@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/img/develp.png";
 import {MagnifyingGlassIcon} from '@heroicons/react/24/outline'
-import {HeartIcon} from '@heroicons/react/24/outline'
 import {EnvelopeIcon} from '@heroicons/react/24/outline'
 import {UserIcon} from '@heroicons/react/24/outline'
 import { useSelector } from "react-redux";
@@ -19,7 +18,7 @@ const Nav = () => {
                 <p>Les annonces</p>
             </NavLink>
             <Link to="/">
-                <img src={logo}></img>
+                <img src={logo} alt="Develp le débuggeur solidaire"></img>
             </Link>
             <ul className="microNavbar">
                 <NavLink className="link" to='/resultats-recherches'>
@@ -30,11 +29,6 @@ const Nav = () => {
                 <NavLink className="link" to="/messagerie">
                     <li>
                         <EnvelopeIcon className="icon" /> Messagerie
-                    </li>
-                </NavLink>
-                <NavLink className="link">
-                    <li>
-                        <HeartIcon className="icon" /> Favoris
                     </li>
                 </NavLink>
 

@@ -29,9 +29,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/messagerie" element={<Messagerie />} />
             <Route path="/profil" element={<Profil />} />
-            <Route path="/favoris" element={<Favoris />} />
             <Route path="/addpost" element={<NouvelleAnnonce />} />
-            <Route path="/annonce" element={<PageAnnonceIndiv />} />
+            <Route path="/annonce/:id" element={<PageAnnonceIndiv />} />
           </Routes>
         </BrowserRouter>
       </Provider>

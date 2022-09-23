@@ -9,7 +9,6 @@ const FormRegister = () => {
     const {
         handleSubmit,
         register,
-        formState: { errors },
     } = useForm();
 
     const dispatch = useDispatch();

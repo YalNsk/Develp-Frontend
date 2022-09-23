@@ -15,7 +15,7 @@ export const registerUser = createAsyncThunk("register", async (data) => {
         "http://localhost:8080/api/auth/register/",
         data
     );
-    return response.data.token;
+    return response.data;
 });
 
-export const logOut = createAction("logOut");
+export const logOut = createAction("user/logOut");

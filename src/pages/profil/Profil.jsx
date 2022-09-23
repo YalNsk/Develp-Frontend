@@ -1,34 +1,34 @@
 import React from "react";
 import Nav from "../../components/nav/nav";
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import connexion from "../../assets/img/connexion.png"
+import Profil from "../../components/profil/Profil";
 
-const Profil = ({pseudo, firstname, lastname}) => {
+const ProfilPage = ({pseudo, firstname, lastname}) => {
 
-    const id  = useSelector(state => state.auth.userId);
-    const url = `http://localhost:8080/api/user/${id}`
-    const [user, setuser] = useState([]); 
-
-    useEffect(() => {
-        axios.get(url).then((res) => {console.log(res); setuser(res.data)});
-    }, [url]);
+    const isConnected = useSelector(state => state.auth.isConnected);
 
     return (
         <div>
                 <Nav />
-                <div>
-                    <div className="profil">
-                        <h1> {user.pseudo} </h1>
-                        <p>{user.firstname} </p>
-                        <p>{user.lastname}</p>
+                {
+                !isConnected && <div className="etreConnecte"> 
+                    <p>Vous devez être connecté pour avoir accès à votre profil : <NavLink to='/login'>se connecter</NavLink></p> 
+                    <div className="remplissage">
+                        <img src={connexion} alt="robot qui dit qu'on doit être connecté" />
+                        <a className="attribute" target="blank" href="https://www.freepik.com/free-vector/chat-bot-banner-template-set-future-marketing-innovation_6929246.htm#query=robot&position=8&from_view=search">Image by vectorpouch</a>
+                    </div>
+                    
                 </div>
-            </div>
+            }
+            {isConnected &&  <div className="profil">
+                    <Profil />
+            </div>}
         </div>
     )
 
 };
 
 
-export default Profil;
+export default ProfilPage;

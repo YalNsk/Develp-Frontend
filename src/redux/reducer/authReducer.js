@@ -25,6 +25,7 @@ const authReducer = createReducer(initialState, (builder) => {
             state.isConnected = true;
             state.msgError = "";
             state.token = action.payload;
+            state.userId = action.payload.userId;
         })
             .addCase(registerUser.rejected, (state, action) => {
             state.isConnected = false;

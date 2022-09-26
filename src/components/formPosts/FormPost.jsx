@@ -16,9 +16,6 @@ const FormPost = () => {
 
     const userId = useSelector(state => state.auth.userId);
 
-
-    
-
     const [msgError, setMsgError] = useState("");
 
     const envoyer = (data) => {
@@ -56,7 +53,7 @@ const FormPost = () => {
                 <p className="précision">Soyez le plus précis possible</p>
             </div>
             <div className="inputs">
-        <label htmlFor="country">Mon site est principalement codé en : </label>
+        <label htmlFor="techno">Mon site est principalement codé en : </label>
             <select name="technoUtilisees" id="techno" className="selection"{...register("techno")}>
                 <option className="option" value="">
                     Choisissez...
@@ -80,7 +77,7 @@ const FormPost = () => {
                 <input type="file"
                 name="illu"
                 id="illu"
-                /*{...register("file")}*//>
+                />
             </div>
             <div>{msgError}</div>
         <button type="submit">Envoyez l'annonce</button>

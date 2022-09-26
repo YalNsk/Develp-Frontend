@@ -32,8 +32,7 @@ const Annonces = () => {
             </ul>
             
                     <button className="buttonC">
-                    {isConnected && <NavLink className="link" to="/addpost">Ajouter une annonce</NavLink>}
-                    {!isConnected && <NavLink className="link" to="/login">Ajouter une annonce</NavLink>}
+                    <NavLink className="link" to="/addpost">Ajouter une annonce</NavLink>
                     </button>
     
         </div>

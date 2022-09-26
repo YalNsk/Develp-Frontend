@@ -8,8 +8,7 @@ const Card = ({element}) => {
             <div className="containerTxt">
                 <div className="header">
                     <h3 className="nom">{element.titre}</h3>
-                    <h5>{element.techno}</h5>
-                    <h5>{element.budget}€</h5>
+                    <h5>{element.techno} - {element.budget}€</h5>
                     <h5 className="pseudo">{element.pseudo}</h5>
                 </div>
                 

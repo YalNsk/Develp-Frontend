@@ -3,7 +3,6 @@ import "./styles/App.scss"
 import Accueil from "./pages/accueil/Accueil";
 import Annonces from "./pages/lesAnnonces/Annonces";
 import Recherches from "./pages/recherches/Recherches";
-import Messagerie from "./pages/messagerie/Messagerie"
 import Profil from "./pages/profil/Profil";
 import Register from "./pages/login-register/Register";
 import SeConnecter from "./pages/login-register/Login";
@@ -26,7 +25,6 @@ function App() {
             <Route path="/resultats-recherches" element={<Recherches />} />
             <Route path="/login" element={<SeConnecter />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/messagerie" element={<Messagerie />} />
             <Route path="/profil" element={<Profil />} />
             <Route path="/addpost" element={<NouvelleAnnonce />} />
             <Route path="/annonce/:id" element={<PageAnnonceIndiv />} />

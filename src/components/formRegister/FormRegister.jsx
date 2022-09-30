@@ -94,7 +94,7 @@ const FormRegister = () => {
 
 
 
-        <button>Créer un compte</button>
+        <button type="submit">Créer un compte</button>
 
         <p className="aufait">Tous les champs sont obligatoires</p>
         </form>
